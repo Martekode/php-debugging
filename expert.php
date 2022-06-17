@@ -99,3 +99,29 @@ function randomHeroName()
 }
 
 echo "Here is the name: " . combineNames();
+
+
+new_exercise(7);
+function copyright(string $year) {
+    return "&copy; $year BeCode";
+}
+//print the copyright
+echo copyright(date('y'));
+
+new_exercise(8);
+function login(string $email, string $password) {
+    if($email == 'john@example.be' || $password == 'pocahontas') {
+        return 'Welcome John';
+        return ' Smith';
+    }
+    return 'No access';
+}
+
+//do not change anything below
+//should great the user with his full name (John Smith)
+echo login('john@example.be', 'pocahontas');
+//no access
+echo login('john@example.be', 'dfgidfgdfg');
+//no access
+echo login('wrong@example.be', 'wrong');
+//you can change things again!
