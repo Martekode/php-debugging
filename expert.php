@@ -108,9 +108,8 @@ echo copyright(date('y'));
 
 new_exercise(8);
 function login(string $email, string $password) {
-    if($email == 'john@example.be' || $password == 'pocahontas') {
-        return 'Welcome John';
-        return ' Smith';
+    if($email == 'john@example.be' && $password == 'pocahontas') {
+        return 'Welcome John Smith';
     }
     return 'No access';
 }
