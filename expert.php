@@ -129,9 +129,11 @@ function isLinkValid(string $link) {
 
     foreach ($unacceptables as &$unacceptable) {
         if (strpos($link, $unacceptable) >-1) {
+            var_dump(strpos($link, $unacceptable)>-1);
             return 'Unacceptable Found<br />';
         }
     }
+    var_dump(strpos($link, $unacceptable));
     return 'Acceptable<br />';
 }
 //invalid link
