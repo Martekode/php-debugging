@@ -125,10 +125,10 @@ echo login('wrong@example.be', 'wrong');
 
 new_exercise(9);
 function isLinkValid(string $link) {
-    $unacceptables = array('https:','.doc','.pdf', '.jpg', '.jpeg', '.gif', '.bmp', '.png');
+    $unacceptables = array('https','.doc','.pdf', '.jpg', '.jpeg', '.gif', '.bmp', '.png');
 
-    foreach ($unacceptables as $unacceptable) {
-        if (strpos($link, $unacceptable) == true) {
+    foreach ($unacceptables as &$unacceptable) {
+        if (strpos($link, $unacceptable) >-1) {
             return 'Unacceptable Found<br />';
         }
     }
